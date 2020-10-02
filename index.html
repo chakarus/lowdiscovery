@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        {{secondes}}
+        <a v-bind:href="link">{{message}}</a>
+        <div class="alert alert-success" v-if="success">
+            l'enregistrement a marché
+        </div>
+        <span v-on:click="close">X</span>
+        <div class="alert alert-danger" v-else>
+            echec
+        </div>
+        <ul v-for="person in persons">
+            <li>
+                {{person}}
+            </li>
+  
+        </ul>
+<input type=text v-model="numero">
+<p>{{numero}}</p>
+
+<div :class="classe?'alert alert-success':'alert alert-danger'">ok</div>
+<button v-on:click="changer">change</button>
+ <input type=text v-model="nom">
+   <button @click="addPerson">ajouter</button>
+
+   {{nom}}
+
+    </div>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
